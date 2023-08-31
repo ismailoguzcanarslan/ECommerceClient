@@ -1,5 +1,12 @@
 <app-header></app-header>
-<app-sidebar></app-sidebar>
-<app-footer></app-footer>
 
-<router-outlet></router-outlet>
+<mat-drawer-container hasBackdrop="false" class="admin-container">
+   <mat-drawer #drawer mode="push" opened class="admin-left"><app-sidebar></app-sidebar></mat-drawer>
+   <mat-drawer-content>
+       <router-outlet></router-outlet>
+       
+   </mat-drawer-content>
+</mat-drawer-container>
+
+ 
+<app-footer></app-footer>
