@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-orders',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent {
+  
+  constructor(private spinner: NgxSpinnerService) {}
 
+  ngOnInit(): void{
+    this.spinner.show("BallClipRotatePulse");
+
+    setTimeout(()=>{
+      this.spinner.hide("BallClipRotatePulse")
+    }, 3000)
+  }
 }

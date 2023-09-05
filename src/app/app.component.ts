@@ -28,3 +28,9 @@ $(document).ready(()=>{
   alert("asd")
 })
 */
+
+/*
+$.get("https://localhost:7105/api/products", data => {
+  console.log(data);
+})
+*/
