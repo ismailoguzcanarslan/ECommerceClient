@@ -36,7 +36,7 @@ export class HttpClientService {
     return this.httpClient.post<T>(url, body, {headers: requestParameters.headers});
   }
 
-  put<T>(requestParameters: Partial<RequestParameters>, body: Partial<T>){
+  put<T>(requestParameters: Partial<RequestParameters>, body: Partial<T>) : Observable<T>{
     let url : string = ""
     if(requestParameters.fullEndPoint)
       url = requestParameters.fullEndPoint;
@@ -46,8 +46,14 @@ export class HttpClientService {
       return this.httpClient.put<T>(url, body, {headers: requestParameters.headers});
   }
 
-  delete(){
+  delete<T>(requestParameters: Partial<RequestParameters>, id: string) : Observable<T>{
+    let url : string = ""
+    if(requestParameters.fullEndPoint)
+      url = requestParameters.fullEndPoint;
+    else
+      url = `${this.createUrl(requestParameters)}/${id}`;
 
+      return this.httpClient.delete<T>(url, {headers: requestParameters.headers})
   }
 }
 
