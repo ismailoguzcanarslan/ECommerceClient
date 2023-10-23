@@ -15,10 +15,10 @@ export class AppComponent {
    *
    */
   constructor(toastrService: CustomToastrService) {
-    toastrService.message("Oğuz","Arslan", { messageType: ToastrMessageType.Info, position: ToastrPosisiton.BottomCenter})
-    toastrService.message("Oğuz","Arslan", {messageType: ToastrMessageType.Success, position: ToastrPosisiton.BottomFullWidht} )
-    toastrService.message("Oğuz","Arslan", {messageType: ToastrMessageType.Warning, position: ToastrPosisiton.TopCenter})
-    toastrService.message("Oğuz","Arslan", {messageType: ToastrMessageType.Error, position: ToastrPosisiton.TopFullWidht})    
+    // toastrService.message("Oğuz","Arslan", { messageType: ToastrMessageType.Info, position: ToastrPosisiton.BottomCenter})
+    // toastrService.message("Oğuz","Arslan", {messageType: ToastrMessageType.Success, position: ToastrPosisiton.BottomFullWidht} )
+    // toastrService.message("Oğuz","Arslan", {messageType: ToastrMessageType.Warning, position: ToastrPosisiton.TopCenter})
+    // toastrService.message("Oğuz","Arslan", {messageType: ToastrMessageType.Error, position: ToastrPosisiton.TopFullWidht})    
   }
 }
 
